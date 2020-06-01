@@ -6,6 +6,9 @@ from model import extend
 
 app = Flask(__name__)
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_file('favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
