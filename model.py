@@ -39,7 +39,7 @@ def parseSpecialCharacters(text, wow_class_item, wow_race_item, wow_silly_name_i
     parsedText = text.replace("$B", "\n").replace("$b", "\n").replace("$c", wow_class_item).replace("$C", wow_class_item).replace("$r", wow_race_item).replace("$R", wow_race_item).replace("$n", wow_silly_name_item).replace("$N", wow_silly_name_item)
     return parseGenderTokens(parsedText)
 
-def extend(text, size=60):
+def extend(text, size=20):
     if len(text) == 0:
         text = random.choice(suggested_text_list)
     tokens = tokenizer.encode(text)
